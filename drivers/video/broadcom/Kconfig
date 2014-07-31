@@ -1,0 +1,61 @@
+config FB_BRCM_RHEA
+	tristate "Broadcom Rhea Platform Framebuffer support"
+	depends on FB && ARM && ARCH_RHEA
+	select FB_CFB_FILLRECT
+	select FB_CFB_COPYAREA
+	select FB_CFB_IMAGEBLIT
+	help
+	  This framebuffer device driver is for the Broadcom Rhea platform.
+
+config CPU_AT_TURBO_WHILE_LCD_ON
+	bool "keep CPU at TURBO when LCD is ON"
+	depends on ARCH_RHEA && KONA_CPU_FREQ_DRV
+	default Y
+	help
+	  This config is used to put the CPU at TURBO(max) frequency when LCD
+	  is ON.
+
+config FB_BRCM_ILI9486
+	tristate "LCD Panel ILI9486 Controller"
+	default N
+	help 
+		HVGA LCD panel (ILI9486 controller)
+		
+	  
+config LCD_ILI9486_SUPPORT
+        tristate "LCD Panel- ILI9486 controller"
+        default N
+        help
+	  HVGA LCD panel (ILI9486 controller)
+
+config LCD_R61531_SUPPORT
+        tristate "LCD Panel- R61531 controller"
+        default N
+        help
+	  HVGA LCD panel (R61531 controller)
+
+config LCD_ILI9341_SUPPORT
+        tristate "LCD Panel- ILI9341 controller"
+        default N
+        help
+	  QVGA LCD panel (ILI9341 controller)
+config LCD_ILI9341_I_SUPPORT
+        tristate "LCD Panel- ILI9341 Parralel controller"
+        default N
+        help
+	  QVGA LCD panel (ILI9341 controller)		  
+config LCD_ILI9341_C_SUPPORT
+        tristate "LCD Panel- ILI9341 Parralel controller"
+        default N
+        help
+	  QVGA LCD panel (ILI9341 controller)
+config LCD_ILI9341_CRSC_SUPPORT
+        tristate "LCD Panel- ILI9341 Parralel controller"
+        default N
+        help
+	  QVGA LCD panel (ILI9341 controller)
+config LCD_ILI9486_SMI_SUPPORT
+        tristate "LCD Panel- ILI9486 Parralel controller"
+        default N
+        help
+	  HVGA LCD panel (ILI9486 controller)
