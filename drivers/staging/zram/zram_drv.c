@@ -709,7 +709,7 @@ static int __init zram_init(void)
 
 	if (!num_devices) {
 		pr_info("num_devices not specified. Using default: 1\n");
-		num_devices = 1;
+		num_devices = 4;
 	}
 
 	/* Allocate the device array and initialize each one */
